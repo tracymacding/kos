@@ -4,8 +4,8 @@ Tools needed is in directory "tool" under kos
 
 ## Preparation
 
-Before install necessary like gmp, gcc, etc ..., please prepare installation directory
-Suppose, we install all the necessary lib and tool to dir "/home/userX/tool"
+Before install necessary like gmp, gcc, etc ..., please prepare installation directory  
+Suppose, we install all the necessary lib and tool to dir "/home/userX/tool"  
 Create it if not exist
 
 ```
@@ -61,7 +61,7 @@ cd ..
 ```
 tar xjf binutils-2.21.1.tar.bz2
 cd binutils-2.21.1
-./configure --prefix=/home/usrX/tool --target=i386-jos-elf --disable-werror \
+./configure --prefix=/home/userX/tool --target=i386-jos-elf --disable-werror \
 	LDFLAGS="-L/home/userX/tool/lib"
 make & make install
 
@@ -82,7 +82,7 @@ tar xjf gcc-core-4.6.1.tar.bz2
 cd gcc-4.6.1
 mkdir build              # GCC will not compile correctly unless you build in a separate directory
 cd build
-../configure --prefix=/home/usrX/tool \
+../configure --prefix=/home/userX/tool \
     --target=i386-jos-elf --disable-werror \
     --disable-libssp --disable-libmudflap --with-newlib \
     --without-headers --enable-languages=c \
@@ -121,7 +121,7 @@ cd ..
 ```
 tar xjf qemu-2.5.0.tar.bz2
 cd qemu-2.5.0
-./configure --prefix=/home/usrX/tool --target-list=i386-softmmu,i386-linux-user
+./configure --prefix=/home/userX/tool --target-list=i386-softmmu,i386-linux-user
 make & make install
 cd ..
 ```
